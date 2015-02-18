@@ -322,7 +322,7 @@ func (t *handshakeTransport) enterKeyExchange(otherInitPacket []byte) error {
 	if otherInit.FirstKexFollows && algs.kex != otherInit.KexAlgos[0] {
 		// other side sent a kex message for the wrong algorithm,
 		// which we have to ignore.
-		if _, err := t.conn.readPacket(); err != nil {
+		if _, err := t.readPacket(); err != nil {
 			return err
 		}
 	}
@@ -347,7 +347,12 @@ func (t *handshakeTransport) enterKeyExchange(otherInitPacket []byte) error {
 	if err = t.conn.writePacket([]byte{msgNewKeys}); err != nil {
 		return err
 	}
-	if packet, err := t.conn.readPacket(); err != nil {
+	packet, err := t.conn.readPacket()
+	for err == nil && packet[0] == msgIgnore {
+		packet, err = t.conn.readPacket()
+	}
+
+	if err != nil {
 		return err
 	} else if packet[0] != msgNewKeys {
 		return unexpectedMessageError(msgNewKeys, packet[0])

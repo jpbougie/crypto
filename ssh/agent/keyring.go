@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ScriptRock/crypto/ssh"
+	"github.com/jpbougie/crypto/ssh"
 )
 
 type privKey struct {

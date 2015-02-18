@@ -10,8 +10,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/ScriptRock/crypto/ssh"
-	"github.com/ScriptRock/crypto/ssh/agent"
+	"github.com/jpbougie/crypto/ssh"
+	"github.com/jpbougie/crypto/ssh/agent"
 )
 
 func TestAgentForward(t *testing.T) {

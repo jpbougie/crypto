@@ -12,8 +12,8 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/ScriptRock/crypto/ssh"
-	"github.com/ScriptRock/crypto/ssh/terminal"
+	"github.com/jpbougie/crypto/ssh"
+	"github.com/jpbougie/crypto/ssh/terminal"
 )
 
 func ExampleNewServerConn() {

@@ -17,7 +17,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ScriptRock/crypto/ssh/testdata"
+	"github.com/jpbougie/crypto/ssh/testdata"
 )
 
 func rawKey(pub PublicKey) interface{} {

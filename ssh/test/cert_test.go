@@ -10,7 +10,7 @@ import (
 	"crypto/rand"
 	"testing"
 
-	"github.com/ScriptRock/crypto/ssh"
+	"github.com/jpbougie/crypto/ssh"
 )
 
 func TestCertLogin(t *testing.T) {

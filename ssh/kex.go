@@ -99,6 +99,10 @@ func (group *dhGroup) Client(c packetConn, randSource io.Reader, magics *handsha
 	}
 
 	packet, err := c.readPacket()
+	for err == nil && packet[0] == msgIgnore {
+		packet, err = c.readPacket()
+	}
+
 	if err != nil {
 		return nil, err
 	}
@@ -213,6 +217,9 @@ func (kex *ecdh) Client(c packetConn, rand io.Reader, magics *handshakeMagics) (
 	}
 
 	packet, err := c.readPacket()
+	for err == nil && packet[0] == msgIgnore {
+		packet, err = c.readPacket()
+	}
 	if err != nil {
 		return nil, err
 	}

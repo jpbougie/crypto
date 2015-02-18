@@ -21,8 +21,8 @@ import (
 	"testing"
 	"text/template"
 
-	"github.com/ScriptRock/crypto/ssh"
-	"github.com/ScriptRock/crypto/ssh/testdata"
+	"github.com/jpbougie/crypto/ssh"
+	"github.com/jpbougie/crypto/ssh/testdata"
 )
 
 const sshd_config = `

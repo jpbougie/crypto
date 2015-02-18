@@ -12,7 +12,7 @@ import (
 	"log"
 	"math/big"
 
-	"github.com/ScriptRock/crypto/ssh"
+	"github.com/jpbougie/crypto/ssh"
 )
 
 // Server wraps an Agent and uses it to implement the agent side of

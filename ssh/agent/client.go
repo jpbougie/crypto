@@ -24,7 +24,7 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/ScriptRock/crypto/ssh"
+	"github.com/jpbougie/crypto/ssh"
 )
 
 // Agent represents the capabilities of an ssh-agent.

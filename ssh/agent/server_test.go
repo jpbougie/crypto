@@ -7,7 +7,7 @@ package agent
 import (
 	"testing"
 
-	"github.com/ScriptRock/crypto/ssh"
+	"github.com/jpbougie/crypto/ssh"
 )
 
 func TestServer(t *testing.T) {

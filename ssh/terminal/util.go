@@ -14,7 +14,7 @@
 // 	        panic(err)
 // 	}
 // 	defer terminal.Restore(0, oldState)
-package terminal // import "github.com/ScriptRock/crypto/ssh/terminal"
+package terminal // import "github.com/jpbougie/crypto/ssh/terminal"
 
 import (
 	"io"
